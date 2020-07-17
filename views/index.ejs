@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real time Chat App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>Realtime Chat Room</h3>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Anonymous</div>
+        <div class="card-body">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Change your username"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-warning" type="button" id="usernameBtn">
+                Change
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-box">
+          <ul class="list-group list-group-flush" id="message-list"></ul>
+          <div class="info"></div>
+        </div>
+
+        <div class="card-footer">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="message"
+              placeholder="Send new message"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-success" type="button" id="messageBtn">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="/js/chatroom.js"></script>
+  </body>
+</html>
